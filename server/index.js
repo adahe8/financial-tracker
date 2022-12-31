@@ -19,6 +19,6 @@ mongoose.connect(config.databaseUrl, {
     });
 
 
-server.listen(4000, () => {
+server.listen(8000, () => {
     console.log('Server started on Port '+ config.PORT);
 });

@@ -22,4 +22,10 @@ router.post("/purchases", async (req, res) => {
     }
 });
 
+router.delete("/purchases", async (req, res) => {
+    const { purchaseName } = req.params.name;
+    const deletePurchase = await Purchase.deleteOne({name: purchaseName});
+    res.status(200).json({ deletePurchase });
+});
+
 module.exports = router;

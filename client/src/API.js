@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const serverURL = 'http://localhost:4000';
+const serverURL = 'http://localhost:3000';
 
 const API = {
     getPurchase: function() {
@@ -8,6 +8,9 @@ const API = {
     },
     createPurchase: function(payload) {
         return axios.post(`${serverURL}/api/purchases`, payload);
+    },
+    deletePurchase: function(payload) {
+        return axios.delete(`${serverURL}/api/purchases`,payload);
     }
 }
 export default API;
